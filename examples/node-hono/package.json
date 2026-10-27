@@ -1,0 +1,18 @@
+{
+  "name": "contena-hono",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --experimental-strip-types index.ts"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@hono/node-server": "^1.11.4",
+    "@contena-ag/app-server-sdk": "*",
+    "better-sqlite3": "^11.2.1",
+    "hono": "^4.4.7"
+  }
+}

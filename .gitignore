@@ -1,0 +1,14 @@
+/.idea
+node_modules
+dist
+npm
+bun.lockdb
+bun.lock
+/examples/*/.wrangler
+
+
+.tshy
+.tshy-build
+shop.db
+shop.db*
+package-lock.json

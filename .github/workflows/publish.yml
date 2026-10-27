@@ -1,0 +1,43 @@
+name: Publish
+
+on:
+    release:
+        types: [published]
+
+jobs:
+    publish:
+        runs-on: ubuntu-latest
+
+        permissions:
+            id-token: write
+            contents: read
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+
+            - name: Setup Node
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 22
+                  registry-url: "https://registry.npmjs.org"
+
+            - name: Setup Bun
+              uses: oven-sh/setup-bun@v2
+
+            - name: Install dependencies
+              run: bun install
+
+            - name: Generate ESM/CJS
+              run: bun run init
+
+            - name: Set version
+              run: jq '.version = "${{ github.event.release.tag_name }}"' package.json > tmp.json && mv tmp.json package.json
+
+            - name: Update npm
+              run: npm install -g npm@latest
+
+            - name: Publish
+              run: npm publish --provenance
+              env:
+                  NPM_CONFIG_PROVENANCE: true

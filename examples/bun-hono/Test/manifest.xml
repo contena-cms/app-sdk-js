@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/contena-cms/platform/trunk/src/Core/Framework/App/Manifest/Schema/manifest-1.0.xsd">
+    <meta>
+        <name>Test</name>
+        <label>Test</label>
+        <label lang="de-DE">Test</label>
+        <description>Test</description>
+        <description lang="de-DE">Test</description>
+        <author>Example</author>
+        <copyright>Example</copyright>
+        <version>0.0.1</version>
+        <icon>icon.png</icon>
+        <license>MIT</license>
+    </meta>
+    <setup>
+        <registrationUrl>http://localhost:3000/app/register</registrationUrl>
+        <secret>Test</secret>
+    </setup>
+    <webhooks>
+        <webhook name="appActivate" url="http://localhost:3000/app/activate" event="app.activated"/>
+        <webhook name="appDeactivated" url="http://localhost:3000/app/deactivate" event="app.deactivated"/>
+        <webhook name="appDelete" url="http://localhost:3000/app/delete" event="app.deleted"/>
+    </webhooks>
+    <admin>
+        <action-button action="test" entity="product" view="detail" url="http://localhost:3000/app/action-button">
+            <label>Test</label>
+        </action-button>
+    </admin>
+</manifest>

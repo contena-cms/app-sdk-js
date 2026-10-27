@@ -1,0 +1,230 @@
+{
+	"name": "@contena-ag/app-server-sdk",
+	"version": "2.0.3",
+	"description": "App Server SDK for JavaScript",
+	"type": "module",
+	"license": "Apache-2.0",
+	"keywords": [
+		"contena",
+		"app-server"
+	],
+	"exports": {
+		"./package.json": "./package.json",
+		".": {
+			"import": {
+				"types": "./dist/esm/mod.d.ts",
+				"default": "./dist/esm/mod.js"
+			},
+			"require": {
+				"types": "./dist/commonjs/mod.d.ts",
+				"default": "./dist/commonjs/mod.js"
+			}
+		},
+		"./helper/app-actions": {
+			"import": {
+				"types": "./dist/esm/helper/app-actions.d.ts",
+				"default": "./dist/esm/helper/app-actions.js"
+			},
+			"require": {
+				"types": "./dist/commonjs/helper/app-actions.d.ts",
+				"default": "./dist/commonjs/helper/app-actions.js"
+			}
+		},
+		"./helper/criteria": {
+			"import": {
+				"types": "./dist/esm/helper/criteria.d.ts",
+				"default": "./dist/esm/helper/criteria.js"
+			},
+			"require": {
+				"types": "./dist/commonjs/helper/criteria.d.ts",
+				"default": "./dist/commonjs/helper/criteria.js"
+			}
+		},
+		"./helper/admin-api": {
+			"import": {
+				"types": "./dist/esm/helper/admin-api.d.ts",
+				"default": "./dist/esm/helper/admin-api.js"
+			},
+			"require": {
+				"types": "./dist/commonjs/helper/admin-api.d.ts",
+				"default": "./dist/commonjs/helper/admin-api.js"
+			}
+		},
+		"./helper/uuid": {
+			"import": {
+				"types": "./dist/esm/helper/uuid.d.ts",
+				"default": "./dist/esm/helper/uuid.js"
+			},
+			"require": {
+				"types": "./dist/commonjs/helper/uuid.d.ts",
+				"default": "./dist/commonjs/helper/uuid.js"
+			}
+		},
+		"./helper/media": {
+			"import": {
+				"types": "./dist/esm/helper/media.d.ts",
+				"default": "./dist/esm/helper/media.js"
+			},
+			"require": {
+				"types": "./dist/commonjs/helper/media.d.ts",
+				"default": "./dist/commonjs/helper/media.js"
+			}
+		},
+		"./helper/notification": {
+			"import": {
+				"types": "./dist/esm/helper/notification.d.ts",
+				"default": "./dist/esm/helper/notification.js"
+			},
+			"require": {
+				"types": "./dist/commonjs/helper/notification.d.ts",
+				"default": "./dist/commonjs/helper/notification.js"
+			}
+		},
+		"./integration/hono": {
+			"import": {
+				"types": "./dist/esm/integration/hono.d.ts",
+				"default": "./dist/esm/integration/hono.js"
+			},
+			"require": {
+				"types": "./dist/commonjs/integration/hono.d.ts",
+				"default": "./dist/commonjs/integration/hono.js"
+			}
+		},
+		"./integration/cloudflare-kv": {
+			"import": {
+				"types": "./dist/esm/integration/cloudflare-kv.d.ts",
+				"default": "./dist/esm/integration/cloudflare-kv.js"
+			},
+			"require": {
+				"types": "./dist/commonjs/integration/cloudflare-kv.d.ts",
+				"default": "./dist/commonjs/integration/cloudflare-kv.js"
+			}
+		},
+		"./integration/deno-kv": {
+			"import": {
+				"types": "./dist/esm/integration/deno-kv.d.ts",
+				"default": "./dist/esm/integration/deno-kv.js"
+			},
+			"require": {
+				"types": "./dist/commonjs/integration/deno-kv.d.ts",
+				"default": "./dist/commonjs/integration/deno-kv.js"
+			}
+		},
+		"./integration/dynamodb": {
+			"import": {
+				"types": "./dist/esm/integration/dynamodb.d.ts",
+				"default": "./dist/esm/integration/dynamodb.js"
+			},
+			"require": {
+				"types": "./dist/commonjs/integration/dynamodb.d.ts",
+				"default": "./dist/commonjs/integration/dynamodb.js"
+			}
+		},
+		"./integration/bun-sqlite": {
+			"import": {
+				"types": "./dist/esm/integration/bun-sqlite.d.ts",
+				"default": "./dist/esm/integration/bun-sqlite.js"
+			},
+			"require": {
+				"types": "./dist/commonjs/integration/bun-sqlite.d.ts",
+				"default": "./dist/commonjs/integration/bun-sqlite.js"
+			}
+		},
+		"./integration/better-sqlite3": {
+			"import": {
+				"types": "./dist/esm/integration/better-sqlite3.d.ts",
+				"default": "./dist/esm/integration/better-sqlite3.js"
+			},
+			"require": {
+				"types": "./dist/commonjs/integration/better-sqlite3.d.ts",
+				"default": "./dist/commonjs/integration/better-sqlite3.js"
+			}
+		},
+		"./types": {
+			"import": {
+				"types": "./dist/esm/types.d.ts",
+				"default": "./dist/esm/types.js"
+			},
+			"require": {
+				"types": "./dist/commonjs/types.d.ts",
+				"default": "./dist/commonjs/types.js"
+			}
+		}
+	},
+	"main": "./dist/commonjs/mod.js",
+	"module": "./dist/esm/mod.js",
+	"types": "./dist/commonjs/mod.d.ts",
+	"files": [
+		"dist"
+	],
+	"publishConfig": {
+		"access": "public",
+		"provenance": true
+	},
+	"repository": {
+		"url": "https://github.com/contena-cms/app-sdk-js"
+	},
+	"peerDependencies": {
+		"@aws-sdk/client-dynamodb": "^3",
+		"@aws-sdk/lib-dynamodb": "^3",
+		"better-sqlite3": "^11 || ^12",
+		"hono": "^4"
+	},
+	"peerDependenciesMeta": {
+		"hono": {
+			"optional": true
+		},
+		"@aws-sdk/client-dynamodb": {
+			"optional": true
+		},
+		"@aws-sdk/lib-dynamodb": {
+			"optional": true
+		},
+		"better-sqlite3": {
+			"optional": true
+		}
+	},
+	"devDependencies": {
+		"@aws-sdk/client-dynamodb": "~3.637",
+		"@aws-sdk/lib-dynamodb": "~3.637",
+		"@biomejs/biome": "2.1.1",
+		"@cloudflare/workers-types": "^4.20240821.1",
+		"@types/better-sqlite3": "^7.6.11",
+		"@types/bun": "^1.1.6",
+		"better-sqlite3": "^11",
+		"hono": "^4.5.6",
+		"tshy": "^3.0.2"
+	},
+	"tshy": {
+		"exports": {
+			"./package.json": "./package.json",
+			".": "./src/mod.ts",
+			"./helper/app-actions": "./src/helper/app-actions.ts",
+			"./helper/criteria": "./src/helper/criteria.ts",
+			"./helper/admin-api": "./src/helper/admin-api.ts",
+			"./helper/uuid": "./src/helper/uuid.ts",
+			"./helper/media": "./src/helper/media.ts",
+			"./helper/notification": "./src/helper/notification.ts",
+			"./integration/hono": "./src/integration/hono.ts",
+			"./integration/cloudflare-kv": "./src/integration/cloudflare-kv.ts",
+			"./integration/deno-kv": "./src/integration/deno-kv.ts",
+			"./integration/dynamodb": "./src/integration/dynamodb.ts",
+			"./integration/bun-sqlite": "./src/integration/bun-sqlite.ts",
+			"./integration/better-sqlite3": "./src/integration/better-sqlite3.ts",
+			"./types": "./src/types.ts"
+		},
+		"exclude": [
+			"src/**/*.test.ts"
+		]
+	},
+	"scripts": {
+		"init": "tshy && biome format . --write",
+		"lint": "biome ci .",
+		"lint:fix": "biome lint . --write && biome format . --write && biome check . --write",
+		"typecheck": "tsc --noEmit"
+	},
+	"trustedDependencies": [
+		"@biomejs/biome",
+		"better-sqlite3"
+	]
+}

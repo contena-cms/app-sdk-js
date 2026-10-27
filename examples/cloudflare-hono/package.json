@@ -1,0 +1,22 @@
+{
+  "name": "worker-typescript-template",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Cloudflare worker TypeScript template",
+  "main": "worker.js",
+  "scripts": {
+    "dev": "wrangler dev --local"
+  },
+  "author": "author",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@contena-ag/app-server-sdk": "*",
+    "hono": "^4.6.3"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241004.0",
+    "esbuild": "0.24.0",
+    "typescript": "^5.6",
+    "wrangler": "^3.80.2"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "imports": {
+    "@contena-ag/app-server-sdk": "npm:@contena-ag/app-server-sdk@^1.1.5",
+    "hono": "npm:hono@^4.6.3"
+  }
+}
